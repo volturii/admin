@@ -1,0 +1,59 @@
+
+
+  #map-container {
+    position: relative;
+    height: 100vh;
+    margin-top: 60px;
+      margin-bottom: -150px;
+}
+        #map {
+            width: 100%;
+            height: 80%;
+        }
+
+        #filter-container {
+            position: absolute;
+            top: 10px;
+            left: 60px; /* Przesunięcie na prawo o 30 pikseli */
+            z-index: 1000;
+        }
+
+        #filter {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #filterForm {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+
+
+
+
+
+
+
+        .tekst_mapa {
+            max-width: 1280px; /* Maksymalna szerokość ramki */
+            margin: 20px auto; /* Odstęp od krawędzi ekranu */
+            background-color: #fff; /* Kolor tła ramki */
+            padding: 20px; /* Odstęp wewnątrz ramki */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień ramki */
+        }
+
+       .tekst_mapa h2 {
+            color: #333; /* Kolor tekstu nagłówka */
+           text-align: center;
+        }
+
+        p {
+            color: #555; /* Kolor tekstu akapitu */
+        }
+
+
+

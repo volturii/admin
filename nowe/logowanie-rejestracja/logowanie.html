@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    
+    <title>Authentication with Firebase - Logowanie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    
+      <section class="menu">
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="logo">
+          <h1><a href="../index.html">Makaron</a></h1>
+        </div>
+
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../index.html">Oferta</a></li>
+          <li><a href="../podstrony/O_nas.html">O firmie</a></li>
+          <li><a href="galeria.html">Makaronowe Inspiracje</a></li>
+          <li><a href="../podstrony/kontakt.html">Kontakt</a></li>
+        </ul>
+          
+                    <!-- ikona user-->
+<div class="icons">
+  <a href="logowanie.html">
+    <i class="fa-solid fa-user"></i>
+  </a>
+    <span id="userName"></span>
+</div>
+          
+      </nav>
+          
+
+          
+          
+    </section>
+    
+    <h1></h1>
+
+<!-- Logowanie -->
+<h2>Logowanie</h2>
+<form id="loginForm">
+    <label for="loginEmail">Email:</label>
+    <input type="email" id="loginEmail" required>
+
+    <label for="loginPassword">Hasło:</label>
+    <input type="password" id="loginPassword" required>
+
+    <button type="submit">Zaloguj się</button>
+    <p>Nie posiadasz konta? <a href="register.html">Zarejestruj się</a></p>
+
+    <!-- Element do wyświetlania komunikatu błędu -->
+    <p id="errorMessage" style="color: red;"></p>
+</form>
+
+
+
+    <!-- Wyświetlanie nazwy użytkownika po zalogowaniu -->
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="connect-firebase.js"></script>
+    <script src="logowanie.js"></script>
+    <script src="wyswietl-nazwe-uzytkownika.js"></script>
+
+</body>
+</html>

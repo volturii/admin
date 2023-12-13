@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <title>Formularz</title>
+</head>
+<body>
+    <h1>Formularz</h1>
+
+    <div id="formContainer">
+        <form id="userForm">
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefon">Nr. telefonu:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+
+            <label for="produkt">Wybierz produkt:</label>
+            <select id="produkt" name="produkt" required></select>
+
+            <label for="ilosc">Ilość produktu (Dostępne: <span id="dostepnaIlosc">0</span>):</label>
+            <input type="number" id="ilosc" name="ilosc" required>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+
+    <h2>Twoje dane:</h2>
+    <ul id="userDataList"></ul>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="firebaseConfig.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

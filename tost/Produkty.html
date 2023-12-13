@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+</head>
+<body>
+    <h1><a href="admin_panel.html">Admin Panel</a></h1>
+
+ <!-- Formularz do dodawania produktu -->
+    <h2>Dodaj nowy produkt</h2>
+    <form id="addProductForm">
+        <label for="nazwa">Nazwa produktu:</label>
+        <input type="text" id="nazwa" required>
+
+        <label for="cena">Cena:</label>
+        <input type="number" id="cena" required>
+
+        <label for="dostepnaIlosc">Dostępna ilość:</label>
+        <input type="number" id="dostepnaIlosc" required>
+
+        <button type="submit">Dodaj produkt</button>
+    </form>
+
+    <!-- Lista produktów do edycji/usunięcia -->
+    <h2>Edytuj/Usuń produkty</h2>
+    <ul id="productList"></ul>
+
+<!-- Modal do edycji produktu -->
+<div id="editProductModal" style="display: none;">
+    <form id="editProductForm">
+        <label for="editNazwa">Nowa nazwa produktu:</label>
+        <input type="text" id="editNazwa" required>
+
+        <label for="editCena">Nowa cena:</label>
+        <input type="text" id="editCena" required>
+
+        <label for="editDostepnaIlosc">Nowa dostępna ilość:</label>
+        <input type="text" id="editDostepnaIlosc" required>
+
+        <button type="button" onclick="cancelEdit()">Anuluj</button>
+        <button type="button" onclick="applyEdit()">Zastosuj zmiany</button>
+    </form>
+</div>
+    
+</body>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    
+        <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyD67hcKrDTHGeW30e5KwsxIfw3cFc82Wnw",
+  authDomain: "localhost",
+  databaseURL: "https://stronamakaron-default-rtdb.firebaseio.com",
+  projectId: "stronamakaron",
+  storageBucket: "stronamakaron.appspot.com",
+  messagingSenderId: "481194687354",
+  appId: "1:481194687354:web:69e692a5508f15d21e34c3",
+  measurementId: "G-9K2461DJGY"
+};
+  // Zainicjuj Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+    <script src="produkty.js"></script>
+    
+</html>

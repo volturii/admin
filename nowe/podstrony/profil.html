@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+    <link rel="stylesheet" type="text/css" href="../css/profil.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+      <link rel="stylesheet" type="text/css" href="">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaron</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    
+      <section class="menu">
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="logo">
+          <h1><a href="../index.html">Makaron</a></h1>
+        </div>
+
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../index.html#Products">Oferta</a></li>
+          <li><a href="../podstrony/O_nas.html">O firmie</a></li>
+          <li><a href="galeria.html">Makaronowe Inspiracje</a></li>
+          <li><a href="../podstrony/kontakt.html">Kontakt</a></li>
+        </ul>
+          
+     <!-- Ikona użytkownika -->
+        <div class="icons">
+          <a href="../logowanie-rejestracja/logowanie.html">
+            <i id="userIcon" class="fa-solid fa-user hidden-icon"></i>
+          </a>
+          <div id="dropdownContainer" class="dropdown">
+            <span id="userName" class="dropdown-btn" onclick="toggleDropdown()"></span>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="#">Profil</a>
+                <a href="formularz-zamowienia.html">Zamów produkt</a>
+              <a href="../index.html" onclick="logout()">Wyloguj się</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+      
+      
+      
+
+    <section class="user-info">
+      <div class="user-details">
+        
+        <p>Nazwa użytkownika: <span id="userDisplayName"></span></p>
+        
+      </div>
+        
+
+      <div class="change-password">
+        <h2>Zmień hasło</h2>
+        <form id="changePasswordForm">
+          <label for="currentPassword">Aktualne hasło:</label>
+          <input type="password" id="currentPassword" name="currentPassword" required>
+
+          <label for="newPassword">Nowe hasło:</label>
+          <input type="password" id="newPassword" name="newPassword" required>
+
+          <label for="confirmPassword">Potwierdź nowe hasło:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+          <button type="submit">Zmień hasło</button>
+        </form>
+      </div>
+    </section>
+
+            <h2 class="h2">Historia zamówień:</h2>
+    <ul id="userDataList"></ul>
+      
+      
+      
+      <!-- Skrypty Firebase -->
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+      
+      <script src="../logowanie-rejestracja/connect-firebase.js"></script>
+      
+      <script src="../logowanie-rejestracja/wyswietl-nazwe-uzytkownika.js"></script>
+      
+      <script defer src="app.js"></script>
+      
+          <script src="../script/wyswietlanie-info.js"></script>
+      
+      <script defer src="../script/script2.js"></script>
+      
+      
+
+    <script>
+      
+      // Obsługa formularza zmiany hasła
+      const changePasswordForm = document.getElementById("changePasswordForm");
+
+      changePasswordForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const currentPassword = document.getElementById("currentPassword").value;
+        const newPassword = document.getElementById("newPassword").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        // Pobranie zalogowanego użytkownika
+        const user = firebase.auth().currentUser;
+          
+
+        // Autentykacja użytkownika
+        const credentials = firebase.auth.EmailAuthProvider.credential(
+          user.email,
+          currentPassword
+        );
+
+        // Reautentykacja użytkownika przed zmianą hasła
+        user.reauthenticateWithCredential(credentials)
+          .then(() => {
+            // Reautentykacja powiodła się, zmiana hasła
+            return user.updatePassword(newPassword);
+          })
+          .then(() => {
+            // Zmiana hasła powiodła się
+            alert("Zmiana hasła powiodła się.");
+          })
+          .catch((error) => {
+            // Obsługa błędów
+            console.error("Błąd podczas zmiany hasła:", error.message);
+            alert("Błąd podczas zmiany hasła: " + error.message);
+          });
+      });
+    </script>
+      
+
+      
+        
+      
+      
+      
+          </body>
+    
+    
+    
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Search Forms by Date</h1>
+
+    <label for="searchDate">Select Date:</label>
+    <input type="date" id="searchDate">
+
+    <button onclick="searchForms()">Search Forms</button>
+
+    <!-- Kontener na wyświetlanie formularzy -->
+    <div id="searchResults"></div>
+
+    <!-- Dodaj pole textarea do wprowadzania opisu -->
+    <div id="opisInputContainer" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOpisInput()">&times;</span>
+            <textarea id="newOpisInput"></textarea>
+            <button onclick="saveOpis()">Zapisz Opis</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+    
+    
+        <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyD67hcKrDTHGeW30e5KwsxIfw3cFc82Wnw",
+  authDomain: "localhost",
+  databaseURL: "https://stronamakaron-default-rtdb.firebaseio.com",
+  projectId: "stronamakaron",
+  storageBucket: "stronamakaron.appspot.com",
+  messagingSenderId: "481194687354",
+  appId: "1:481194687354:web:69e692a5508f15d21e34c3",
+  measurementId: "G-9K2461DJGY"
+};
+  // Zainicjuj Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+    <script src="data.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,654 @@
+*{
+        text-decoration: none;
+}
+
+
+
+body {
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/kuchnia.png?alt=media&token=e432522e-1a6b-4e18-aeac-3c19852e7aed);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: 100vh; /* Minimalna wysokość całego widoku (viewport height) */
+}
+
+/* Nowe tło dla rozdzielczości mniejszej niż 1300px */
+@media screen and (max-width: 1300px) {
+  body {
+    background: url(https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/deska.png?alt=media&token=097fe864-1681-402e-ac1b-0c0f40621e17) no-repeat center center fixed;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1650px) and (max-height: 560px) {
+  body {
+     background: url(https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/deska.png?alt=media&token=097fe864-1681-402e-ac1b-0c0f40621e17) no-repeat center center fixed;
+     background-size: cover;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.produkt{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+    
+
+
+
+.produkt nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+
+.produkt nav .logo{
+    font-size: 35px;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+    left: -4%;
+}
+
+
+
+.produkt nav ul{
+    list-style: none;
+}
+
+.produkt nav ul li{
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.produkt nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.produkt nav ul li a:hover{
+    color: #c72092;
+}
+
+.produkt nav .icons i{
+    margin: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.produkt nav .icons i:hover{
+    color: #c72092;
+}
+
+
+
+
+
+.main1 {
+  margin-top: 105px;
+}
+
+
+
+
+.main_content1 {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+
+
+
+.main_image1 {
+    max-width: 100%; 
+    overflow: auto;
+}
+.main_image1 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 66%;;
+  position: absolute;
+  top: 25%; /* Przesuń do góry o 50% wysokości strony */
+  left: 56%; /* Przesuń do środka poziomo */
+}
+
+
+
+.container {
+  position: relative;
+  display: inline-block;
+  width: 90%; /* Dodajemy szerokość 100% do kontenera */
+}
+
+.image {
+  display: block;
+  width: 95%; /* Zmieniamy szerokość na 100% */
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+
+
+
+.text {
+  position: absolute;
+  top: 58%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Zmniejszamy szerokość na 90% */
+  max-width: 600px; /* Ustalamy maksymalną szerokość */
+  font-size: 19px;
+  color: #333; /* Poprawiamy kolor tekstu */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+@media screen and (max-height: 900px) {
+    .image {
+        display: none;
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%; /* Zmieniam left na 50% */
+        transform: translate(-50%, -50%);
+        width: 90%; /* Zwiększam szerokość tekstu */
+        max-width: 600px;
+        font-size: 16px; /* Zwiększam rozmiar czcionki */
+        color: #333;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 0; /* Usuwam margin-top */
+    }
+
+}
+@media screen and (max-height: 1000px) {  /* usuwa tekst co był w notatniku */
+    .container {
+  display: none;
+    }
+}
+
+
+
+
+
+@media screen and (min-height: 899px) {  /* usuwa nowo dadany tekst */
+    .containerr {
+  display: none;
+    }
+}
+
+
+
+@media screen and (max-height: 1000px){
+    
+.containerr{
+    display: inline-block;
+    width: 90%; /* Dodajemy szerokość 100% do kontenera */
+    }
+    
+.textt {
+    position: absolute;
+    top: 50%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+}
+
+
+/* Nowa reguła dla rozdzielczości mniejszej niż 900px */
+@media screen and (max-width: 900px) {
+
+
+  .main_image1 img {
+    display: block;
+    position: absolute;
+    top: 90%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 40%;
+  }
+}
+
+
+
+
+/* Styl dla przycisku */
+
+.modal-button1:hover {
+    background-color: #45a049;
+}
+    /* Styl dla okienka modalnego */
+.modal {
+    display: none; /* Ukryj okienko początkowo */
+    position: fixed; /* Ustaw na pozycji stałej */
+    top: 52%; /* Przesuń do góry o 50% wysokości strony */
+    left: 46%; /* Przesuń do środka poziomo */
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 100%;
+    background: rgba(0,0,0, .5);
+        overflow-y: auto; /* Dodaj pionowy pasek przewijania, jeśli zawartość przekracza dostępną wysokość */
+    max-height: 100%; /* Ustaw maksymalną wysokość okna modalnego na 100% widoku */
+}
+
+
+
+    /* Styl dla zawartości okienka modalnego */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Ustaw odstęp od góry i dołu, automatycznie dostosuj marginesy boczne */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+}
+    
+    /* Styl dla przycisku zamknięcia */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+    
+.close:hover,
+.close:focus {
+     color: black;
+    text-decoration: none;
+     cursor: pointer;
+}
+
+
+
+th, td {
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 13px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+
+
+
+
+.modal-button1 {
+    padding: 10px 50px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    bottom: 5%; /* Odległość od dolnej krawędzi ekranu jako procent */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 40px;
+}
+
+@media screen and (max-height: 900px) {
+    .modal-button1 {
+        bottom: 10%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+}
+
+@media screen and (max-width: 1350px) {
+.modal-button1 {
+    width: 170px;
+    height: 35px; 
+    
+    margin-top: -40px; 
+  }
+}
+    
+@media screen and (max-width: 1350px) {
+.modal-button1 a {
+    font-size: 12px;
+    white-space: nowrap;
+    margin-left: -16px;
+
+  }
+    
+     
+    }
+    
+
+
+    
+@media screen and (max-width: 1000px) {
+.modal-content {
+    width: 260px;
+    margin-top: 200px;
+    
+  }
+    }
+    
+
+
+    
+@media screen and (max-width: 450px) {
+.image {
+    width: 65%;
+    margin-top: 20px;
+    
+  }
+    }
+    
+@media screen and (max-width: 450px) {
+.text {
+    transform: translate(-40%, -50%);
+    font-size: 10px;
+    width: 170px;
+    word-wrap: break-word;
+    margin-left: -48px;
+    margin-top: -20px;
+
+  }
+    
+    }
+    
+    
+    
+
+
+
+
+
+@media screen and (max-width: 650px) {  /* usuwa tekst co był w notatniku */
+    .container {
+  display: none;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    
+.containerr{
+    display: inline-block;
+    width: 90%; /* Dodajemy szerokość 100% do kontenera */
+    }
+    
+.textt {
+    position: absolute;
+    top: 40%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+}
+
+@media screen and (max-width: 650px) {
+    .modal-button1 {
+        bottom: 10%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .modal-button1 {
+        bottom: 20%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+
+
+  .main_image1 img {
+    display: block;
+    position: absolute;
+    top: 81%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 40%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1650px) and (max-height: 560px) {
+    
+    .main_image1 img{
+    display: block;
+    position: absolute;
+    top: 131%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 70%;
+  }
+        .modal-button1 {
+        bottom: -22%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+.textt {
+    position: absolute;
+    top: 68%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+}
+
+
+@media screen and (max-width: 800px) and (max-height: 380px) {
+    
+    .main_image1 img{
+    display: block;
+    position: absolute;
+    top: 171%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+  }
+        .modal-button1 {
+        bottom: -62%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+.textt {
+    position: absolute;
+    top: 83%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+}
+
+
+
+
+
+@media screen and (max-width: 650px) and (max-height: 245px) {
+    
+    .main_image1 img{
+    display: block;
+    position: absolute;
+    top: 231%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+  }
+        .modal-button1 {
+        bottom: -130%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+.textt {
+    position: absolute;
+    top: 120%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+}
+
+@media screen and (max-width: 370px) and (max-height: 300px) {
+    
+    .main_image1 img{
+    display: block;
+    position: absolute;
+    top: 201%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 120%;
+  }
+        .modal-button1 {
+        bottom: -103%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+.textt {
+    position: absolute;
+    top: 103%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+}
+
+
+@media screen and (max-width: 360px) and (max-height: 700px) {
+    
+    .main_image1 img{
+    display: block;
+    position: absolute;
+    top: 100%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 42%;
+  }
+        .modal-button1 {
+        bottom: 1%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+.textt {
+    position: absolute;
+    top: 50%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+}
+
+
+@media screen and (max-width: 310px) and (max-height: 565px) {
+    
+    .main_image1 img{
+    display: block;
+    position: absolute;
+    top: 130%; /* Przesuń zdjęcie niżej */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 56%;
+  }
+        .modal-button1 {
+        bottom: -30%; /* Dostosuj wartość bottom dla wysokości 900px */
+    }
+.textt {
+    position: absolute;
+    top: 67%;
+    left: 43%; /* Ustawiam lewą krawędź na 5% */
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ustawiam szerokość tekstu na auto */
+    max-width: 600px;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Zmieniam text-align na left */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+}

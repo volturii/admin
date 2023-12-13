@@ -1,0 +1,255 @@
+*{
+        text-decoration: none;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  z-index: 10020; /* Dostosuj według potrzeb */
+}
+
+
+.h1{
+   margin-left: 8px;
+}
+
+
+.menu nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu nav .logo {
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  left: -5%;
+}
+
+.menu nav .menu-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu nav .menu-toggle {
+  display: none;
+    
+}
+
+.menu nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu nav ul li {
+  margin: 5px 15px;
+}
+
+.menu nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+    font-weight: bold;
+    
+}
+
+.menu nav ul li a:hover {
+  color: #c72092;
+}
+
+/* Dodaj media queries dla mniejszych rozdzielczości */
+@media screen and (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+       z-index: 1001;
+  }
+
+    
+    .h1{
+ 
+}
+    
+    h1 a{
+    
+}
+    
+  .menu nav {
+    background: white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .menu nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 49px;
+    background: white;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .menu nav .menu-icon {
+    display: block;
+    margin-right: 10px;
+    font-size: 18px;
+    margin: 7px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+      margin-left: -5px;
+  }
+
+  .menu nav .logo {
+    font-size: 15px;
+  }
+
+  .menu nav .menu-toggle:checked + .menu-icon {
+    position: absolute;
+    color: #c72092;
+    margin-top: 7px;
+      
+  }
+
+  .menu nav .menu-toggle:checked ~ ul {
+    display: flex;
+      
+  }
+
+  .menu nav .menu-toggle {
+    display: none;
+  }
+
+  .menu nav ul {
+    margin-top: 7px;
+  }
+
+  .menu nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .menu nav ul li a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+
+
+
+
+.menu nav .icons i{
+    margin: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    
+}
+
+.menu nav .icons i:hover{
+    color: #c72092;
+    
+}
+
+
+
+
+#userName {
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* Add your styles here */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown span {
+  font-size: 19px;
+}
+
+.dropdown-btn {
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 16px;
+  max-width: 200px; /* Set your desired max-width */
+  overflow: hidden; /* Hide content that overflows */
+    right: 0; /* Dodaj tę linię, aby menu trzymało się prawej krawędzi */
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+    white-space: nowrap; /* Dodaj tę linię, aby tekst linków nie łamał się */
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+  right: 0; /* Dodaj tę linię, aby także widoczne menu trzymało się prawej krawędzi */
+}
+
+
+
+
+/* Zabezpieczenie przed uciekaniem w prawo */
+@media screen and (max-width: 600px) {
+  .dropdown-content {
+    right: 20px;
+  }
+  .show {
+    right: 20px;
+  }
+}
+
+
+
+
+
+.hidden-icon {
+    display: none !important;
+}

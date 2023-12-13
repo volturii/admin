@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wyswietl-dane.css">
+
+    <title>Formularz</title>
+</head>
+<body>
+    
+    <ul id="lista-zamowien"></ul>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+      
+    <script src="../logowanie-rejestracja/connect-firebase.js"></script>
+    
+    <script>
+        // Pobierz referencję do kolekcji "zamowienia" z Firestore
+        var zamowieniaCollection = db.collection('zamowienia');
+
+        // Pobierz dane z Firestore, posortuj według daty i wyświetl na stronie
+        zamowieniaCollection.orderBy('timestamp', 'desc').onSnapshot(function (snapshot) {
+            // Wyczyść istniejące dane na stronie przed dodaniem nowych
+            var listaZamowien = document.getElementById('lista-zamowien');
+            listaZamowien.innerHTML = '';
+
+            // Przeiteruj przez każdy dokument w kolekcji
+            snapshot.forEach(function (doc) {
+                // Utwórz element listy dla każdego dokumentu
+                var listItem = document.createElement('li');
+
+                
+                // Uzyskaj dane z dokumentu
+                var imie = doc.data().imie;
+                var email = doc.data().email;
+                var telefon = doc.data().telefon;
+                var produkt = doc.data().produkt;
+                var ilosc = doc.data().ilosc;
+                var data = doc.data().timestamp.toDate(); // Konwersja znacznika czasu na obiekt daty
+
+                // Utwórz elementy <p> dla każdej informacji
+                var imieParagraf = document.createElement('p');
+                var emailParagraf = document.createElement('p');
+                var telefonParagraf = document.createElement('p');
+                var produktParagraf = document.createElement('p');
+                var iloscParagraf = document.createElement('p');
+                var dataParagraf = document.createElement('p');
+
+                // Ustaw tekst dla każdego paragrafu
+                imieParagraf.textContent = `Imię: ${imie}`;
+                emailParagraf.textContent = `Email: ${email}`;
+                telefonParagraf.textContent = `Telefon: ${telefon}`;
+                produktParagraf.textContent = `Produkt: ${produkt}`;
+                iloscParagraf.textContent = `Ilość: ${ilosc}`;
+                dataParagraf.textContent = `Data: ${data.toLocaleString()}`;
+
+                // Dodaj paragrafy do elementu listy
+                listItem.appendChild(imieParagraf);
+                listItem.appendChild(emailParagraf);
+                listItem.appendChild(telefonParagraf);
+                listItem.appendChild(produktParagraf);
+                listItem.appendChild(iloscParagraf);
+                listItem.appendChild(dataParagraf);
+
+                // Dodaj element listy do listy zamówień
+                listaZamowien.appendChild(listItem);
+            });
+        });
+    </script>
+
+</body>
+</html>

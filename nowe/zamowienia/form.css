@@ -1,0 +1,69 @@
+body {
+            
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .order-form {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-form h2 {
+            color: #333;
+        }
+
+        .order-form p {
+            color: #666;
+            text-align: center;
+        }
+
+        #formContainer {
+            text-align: center;
+        }
+
+        #userForm {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 80px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    .order-description {
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .order-description p {
+        text-align: left;
+    }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../zamowienia/form.css">
+     <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <title>Formularz</title>
+</head>
+<body>
+    
+    
+    
+    
+     <section class="menu">
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="logo">
+          <h1><a href="../index.html">Makaron</a></h1>
+        </div>
+
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../index.html#Products">Oferta</a></li>
+          <li><a href="../podstrony/O_nas.html">O firmie</a></li>
+          <li><a href="galeria.html">Makaronowe Inspiracje</a></li>
+          <li><a href="../podstrony/kontakt.html">Kontakt</a></li>
+        </ul>
+          
+     <!-- Ikona użytkownika -->
+        <div class="icons">
+          <a href="../logowanie-rejestracja/logowanie.html">
+            <i id="userIcon" class="fa-solid fa-user hidden-icon"></i>
+          </a>
+          <div id="dropdownContainer" class="dropdown">
+            <span id="userName" class="dropdown-btn" onclick="toggleDropdown()"></span>
+            <div class="dropdown-content" id="myDropdown">
+              <a href="../podstrony/profil.html">Profil</a>
+                <a href="#">Zamów produkt</a>
+              <a href="../index.html" onclick="logout()">Wyloguj się</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+<section class="order-form">
+        <div id="formContainer">
+            <h2>Złóż zamówienie</h2>
+            <p>Skorzystaj z poniższego formularza, aby złożyć zamówienie na nasze produkty!</p>
+
+            <form id="userForm">
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie" name="imie" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefon">Nr. telefonu:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+
+                <!-- Nowy sekcja dla produktów -->
+                <div id="produktyContainer">
+                    <div class="produkt-row">
+                        <label for="produkt">Wybierz produkt:</label>
+                        <select class="produkt" name="produkt" required></select>
+
+                        <label for="ilosc">Ilość produktu (Dostępne: <span class="dostepnaIlosc">0</span>):</label>
+                        <input type="number" class="ilosc" name="ilosc" required>
+                    </div>
+                </div>
+
+                <!-- Przycisk do dodawania nowego produktu -->
+                <button type="button" onclick="addProductRow()">Dodaj Produkt</button>
+
+                <button type="submit">Wyślij Zamówienie</button>
+            </form>
+        
+        
+        <p>Powyżej znajdziesz formularz zamówienia, który pozwoli Ci składać zamówienia na nasze produkty. Prosimy o wypełnienie powyższych pól, abyśmy mogli zrealizować Twoje zamówienie. Oto, jak przebiega proces:</p>
+
+        <!-- Opis zamówienia -->
+        <div class="order-description">
+            <p>1. Imię: Prosimy o podanie swojego imienia, abyśmy mogli zwracać się do Ciebie w miły i personalny sposób.</p>
+            <p>2. Email: Wprowadź swój adres email, który posłuży nam do przekazywania informacji dotyczących zamówienia oraz potwierdzeń.</p>
+            <p>3. Numer Telefonu: Podaj swój numer telefonu, dzięki któremu będziemy mogli skontaktować się w sprawie szczegółów dotyczących zamówienia.</p>
+            <p>4. Produkt: Wybierz z listy naszych pysznych makaronów ten, który chcesz zamówić. Mamy różnorodne smaki i kształty, aby zaspokoić Twoje kulinarne pragnienia.</p>
+            <p>5. Ilość: Określ, ile opakowań wybranego makaronu chcesz zamówić.</p>
+        </div>
+        
+       <p> Po wypełnieniu formularza i jego przesłaniu, skontaktujemy się z Tobą korzystając z podanych przez Ciebie danych kontaktowych, aby omówić szczegóły zamówienia i potwierdzić je.</p>
+        
+        
+    </div>
+  </section>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="../zamowienia/firebaseConfig.js"></script>
+    <script src="../zamowienia/nowe.js"></script>
+    
+    <script src="../logowanie-rejestracja/wyswietl-nazwe-uzytkownika.js"></script>
+    <script src="../script/script2.js"></script>
+
+</body>
+</html>

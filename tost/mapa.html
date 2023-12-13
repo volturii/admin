@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+     <link rel="stylesheet" type="text/css" href="mapa.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+      <h1><a href="admin_panel.html">Admin Panel</a></h1>
+
+<form id="addPointForm">
+    <label for="lat">Latitude:</label>
+    <input type="text" id="lat" name="lat" required>
+    <label for="lng">Longitude:</label>
+    <input type="text" id="lng" name="lng" required>
+    <label for="nazwaSklepu">Nazwa sklepu:</label>
+    <input type="text" id="nazwaSklepu" name="nazwaSklepu" required>
+    <label for="cena">Cena:</label>
+    <input type="text" id="cena" name="cena" required>
+    <button type="button" onclick="addPoint()">Dodaj punkt</button>
+</form>
+
+    
+          <div id="map-container">
+    <div id="map"></div>
+    <div id="filter-container">
+        <div id="filter">
+            <h2>Filtruj według ceny</h2>
+            <form id="filterForm">
+                <label for="minPrice">Cena od:</label>
+                <input type="number" id="minPrice" name="minPrice" min="0">
+                <label for="maxPrice">Cena do:</label>
+                <input type="number" id="maxPrice" name="maxPrice" min="0">
+                <button type="button" onclick="filterMarkers()">Filtruj</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Skrypty Firebase i Leaflet -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Skrypt administratora -->
+    <script defer src="mapa.js"></script>
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyD67hcKrDTHGeW30e5KwsxIfw3cFc82Wnw",
+  authDomain: "localhost",
+  databaseURL: "https://stronamakaron-default-rtdb.firebaseio.com",
+  projectId: "stronamakaron",
+  storageBucket: "stronamakaron.appspot.com",
+  messagingSenderId: "481194687354",
+  appId: "1:481194687354:web:69e692a5508f15d21e34c3",
+  measurementId: "G-9K2461DJGY"
+};
+
+        firebase.initializeApp(firebaseConfig);
+
+       // JavaScript function to add a new point
+function addPoint() {
+    const lat = document.getElementById('lat').value;
+    const lng = document.getElementById('lng').value;
+    const nazwaSklepu = document.getElementById('nazwaSklepu').value;
+    const cena = document.getElementById('cena').value;
+
+    wspolrzedneCollection.add({
+        lat: parseFloat(lat),
+        lng: parseFloat(lng),
+        nazwa_sklepu: nazwaSklepu,
+        cena: parseFloat(cena)
+    }).then(() => {
+        console.log('Punkt dodany pomyślnie!');
+        // Odśwież mapę lub dodaj nowy marker na bieżąco
+    }).catch(error => {
+        console.error('Błąd dodawania punktu: ', error);
+    });
+}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/index_style.css">
+      <link rel="stylesheet" type="text/css" href="css/menu.css">
+      
+     
+   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/mapa.css">
+      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaron</title>
+      
+      
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+
+  </head>
+  <body>
+    
+      <section class="menu">
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="logo">
+          <h1><a class="h1" href="index.html">Makaron</a></h1>
+        </div>
+
+        <ul>
+          <li><a href="#">Strona główna</a></li>
+          <li><a href="#Products">Oferta</a></li>
+          <li><a href="podstrony/O_nas.html">O firmie</a></li>
+          <li><a href="podstrony/galeria.html">Makaronowe Inspiracje</a></li>
+          <li><a href="podstrony/kontakt.html">Kontakt</a></li>
+        </ul>
+          
+                    <!-- ikona user-->
+<div class="icons">
+  <a href="logowanie-rejestracja/logowanie.html">
+    <i id="userIcon" class="fa-solid fa-user hidden-icon"></i>
+  </a>
+<div id="dropdownContainer" class="dropdown">
+    <span id="userName" class="dropdown-btn" onclick="toggleDropdown()"></span>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="podstrony/profil.html">Profil</a>
+        <a href="podstrony/formularz-zamowienia.html">Zamów produkt</a>
+        <a href="index.html" onclick="logout()">Wyloguj się</a>
+    </div>
+</div>
+</div>
+          
+      </nav>
+          
+
+          
+          
+    </section>
+      
+      
+      
+
+      
+        
+    <section class="podmenu">
+      <div class="zdjpodmenu">
+        <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/kopia.png?alt=media&token=9810f1ed-8183-431e-835b-762f1f55e596" alt="zdj 1">
+      </div>
+    </section>
+        
+        
+        <section class="podzdjecie">
+        
+           
+            <div class="main_text">
+                    <h1 class="nmakaron">Nasz makaron<br></h1>
+                    <p class="tekstt">
+                        Na proces produkcji makaronu składają się: przygotowanie surowców, sporządzenie ciasta, formowanie i wykrawanie, suszenie, sortowanie oraz pakowanie produktu gotowego.
+
+                        Podstawowym surowcem do produkcji makaronu jest mąka makaronowa, której skład różni się od składu mąki stosowanej do produkcji pieczywa (m.in. zawiera ona więcej glutenu). Mąka do produkcji makaronów jest otrzymywana z pszenicy twardej. Dobrą mąkę makaronową można również uzyskać z odpowiednio dobranych mieszanek pszenicy zwyczajnej.
+
+                        Kolejnym ważnym surowcem jest woda. Powinna ona spełniać wymagania wody przeznaczonej do picia. Jej dodatek jest o około 50% mniejszy niż w przypadku ciasta przeznaczonego do produkcji chleba. W zależności od sposobu wytwarzania ciasta, woda stosowana do wyrobu makaronu powinna mieć odpowiednią temperaturę. Innymi składnikami dodawanymi do makaronów mogą być między innymi barwniki (np. karotenoidy lub kurkuma).
+                    </p>
+            </div>
+                <div class="zdjprod">
+                    <img class="zdjwalka" src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/ciasto.jpg?alt=media&token=35a1f8c7-1fbc-4b7c-a186-240fa936a819">
+         
+                </div>
+        
+        </section>
+        
+        
+        
+        <section class="naszeprodukty">
+            
+            
+            
+            
+
+                <!--Produkty-->
+    
+
+    
+    
+    <div class="products" id="Products">
+    
+        <h1>Produkty</h1>
+        
+        
+        <p class="opis_prduktow">Nasze produkty są dostępne w opakowaniach po 400 gramów każde, a każdy z nich ma swój unikalny charakterystyczny opis. Aby uzyskać więcej informacji na temat danego produktu, wystarczy kliknąć na niego, aby zobaczyć krótki opis. Jeśli chcesz złożyć zamówienie, serdecznie zapraszamy do założenia konta na naszej stronie. Dzięki temu będziesz mógł/mogła skorzystać z dodatkowych funkcji, takich jak wypełnianie formularza zamówienia. Tworząc konto, będziesz miał/miała również możliwość zobaczenia historii swoich zamówień. Wypełnienie formularza zamówienia jest łatwe i intuicyjne.
+            </p>
+
+        <div class="box">
+            <div class="card">
+
+                
+
+                <div class="image">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/nitkaa.jpg?alt=media&token=ca59b245-9f67-414b-9d74-00a5adaaaf11">
+                </div>
+
+                <div class="products_text">
+                    <h2>Nitka</h2>
+                    <p>
+                        Nitka Cienki, długi makaron o cylindrycznym kształcie.
+                    </p>
+                    
+                    
+                    <a href="podstrony/nitka.html" class="btn">Zobacz więcej</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+              
+
+                <div class="image">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/kluska.jpg?alt=media&token=4f9a66f3-9728-4047-ae87-013b2cb7739a">
+                </div>
+
+                <div class="products_text">
+                    <h2>Kluska</h2>
+                    <p>
+                        Makaron kluska to szeroka, płaska i prostokątna kluska.
+                    </p>
+                    
+                   
+                    <a href="podstrony/kluska.html" class="btn">Zobacz więcej</a>
+                </div>
+
+            </div>
+
+       
+
+   
+
+            <div class="card">
+
+               
+
+                <div class="image">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/wstazka.jpg?alt=media&token=ef4afeae-b201-4770-a9cc-09cebdbc754b">
+                </div>
+
+                <div class="products_text">
+                    <h2>Wstążka</h2>
+                    <p>
+                         Makaron wstążka to płaski, długi i wąski makaron o kształcie wstążki.
+                    </p>
+                    
+                    
+                    <a href="podstrony/wstazka.html" class="btn">Zobacz więcej</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+             
+
+                <div class="image">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/swider.jpg?alt=media&token=fc0e7903-7b38-4df0-bd34-aa63e7f01cc2">
+                </div>
+
+                <div class="products_text">
+                    <h2>Świderka</h2>
+                    <p>
+                        Makaron świderka to rodzaj spiralnie zwiniętego makaronu.
+                    </p>
+                    
+                   
+                    <a href="podstrony/swiderka.html" class="btn">Zobacz więcej</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+              
+
+                <div class="image">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/muszla.jpg?alt=media&token=c7950d05-aaf7-45e3-8ee0-4b198ba19ca4">
+                </div>
+
+                <div class="products_text">
+                    <h2>Muszelka</h2>
+                    <p>
+                        Makaron muszelka przyjmuje kształt muszli, z pustym wnętrzem.
+                    </p>
+                    
+                    
+                    <a href="podstrony/muszelka.html" class="btn">Zobacz więcej</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+               
+
+                <div class="image">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/rurka.jpg?alt=media&token=bc10e2c2-092e-40de-a4e7-b4b86517c1e7">
+                </div>
+
+                <div class="products_text">
+                    <h2>Rurka</h2>
+                    <p>
+                        Makaron rurka to walec z pustym wnętrzem.
+                    </p>
+                    
+                   
+                    <a href="podstrony/rurka.html" class="btn">Zobacz więcej</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+            
+        
+        
+        </section>
+        
+        
+        
+      <div class="tekst_mapa">
+          
+       <h2>Lokalizacje naszych produktów</h2>
+                    <p>
+                        Witaj na naszej interaktywnej mapie, która pomoże Ci odnaleźć najbliższe sklepy oferujące nasz wyjątkowy makaron! Nasza firma z pasją produkuje wysokiej jakości makaron, a teraz dzięki tej mapie możesz łatwo znaleźć sklepy, w których jest dostępny nasz produkt.</p>
+
+          
+    <h3>Jak Korzystać z Mapy:</h3>
+    <div class="feature-list">
+        <div class="feature-list-item">
+            <p>Znajdź Najbliższe Sklepy: Każdy pin na mapie oznacza sklep, w którym dostępny jest nasz makaron. Kliknij na pin, aby zobaczyć nazwę sklepu.</p>
+        </div>
+        <div class="feature-list-item">
+            <p>Sprawdź Ceny: Po kliknięciu na pin, możesz zobaczyć nie tylko nazwę sklepu, ale także cenę naszego makaronu w danym miejscu.</p>
+        </div>
+        <div class="feature-list-item">
+            <p>Filtrowanie po Cenie: Jeśli chcesz dostosować swoje poszukiwania do budżetu, skorzystaj z funkcji filtrowania. Wprowadź zakres cenowy, aby zobaczyć tylko te sklepy, które spełniają Twoje oczekiwania cenowe.</p>
+        </div>
+    </div>
+
+    <h3>Dlaczego Warto Używać Naszej Mapy:</h3>
+    <div class="feature-list">
+        <div class="feature-list-item">
+            <p>Łatwe Lokalizowanie Produktów: Nie trać czasu na szukanie – nasza mapa pozwala Ci szybko zlokalizować sklepy w Twojej okolicy oferujące nasz makaron.</p>
+        </div>
+        <div class="feature-list-item">
+            <p>Aktualne Ceny: Dzięki aktualizowanym na bieżąco informacjom o cenach, zawsze będziesz wiedział, gdzie znajdziesz najlepszą ofertę.</p>
+        </div>
+        <div class="feature-list-item">
+            <p>Filtrowanie dla Wygody: Dostosuj mapę do swoich preferencji cenowych, aby znaleźć idealny sklep, który spełni Twoje oczekiwania.</p>
+        </div>
+    </div>
+      
+      <div id="map-container">
+    <div id="map"></div>
+    <div id="filter-container">
+        <div id="filter">
+            <h2>Filtruj według ceny</h2>
+            <form id="filterForm">
+                <label for="minPrice">Cena od:</label>
+                <input type="number" id="minPrice" name="minPrice" min="0">
+                <label for="maxPrice">Cena do:</label>
+                <input type="number" id="maxPrice" name="maxPrice" min="0">
+                <button type="button" onclick="filterMarkers()">Filtruj</button>
+            </form>
+        </div>
+    </div>
+</div>
+      
+      
+      
+      
+      </div>
+      
+      
+      
+        
+        
+        
+         <!--O nas-->
+        
+        <section class="O_nas">
+    
+    
+<div class="about">
+    <div class="inner-section">
+        <div class="image-section">
+            <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/makaron2.png?alt=media&token=e0efcbde-e35d-46c4-96b4-80a211129d9f" alt="Zdjęcie" class="about-image">
+        </div>
+        <div class="content-section">
+            <h1>O nas</h1>
+            <p class="text1">
+                Mamy przyjemność przedstawić Ci naszą firmę, lokalnego producenta wyjątkowego makaronu. Jesteśmy zespołem pasjonatów, którzy nie tylko kochają dobrą kuchnię, ale także szanują tradycję i lokalne skarby kulinarne.
+                <br><br>
+                Nasza firma powstała z myślą o zapewnieniu naszej społeczności najwyższej jakości makaronu, wykonanego z najlepszych składników. Dbamy o każdy etap produkcji, zaczynając od starannie wyselekcjonowanej pszenicy, po profesjonalne procesy wytwarzania, aż do finalnego produktu gotowego do podania na Twoim talerzu.
+                <br><br>
+                Nasza oferta obejmuje szeroki wybór kształtów i rozmiarów makaronu, aby sprostać różnym preferencjom kulinarnej podróży. Niezależnie od tego, czy szukasz klasyki w postaci kluski, czy też pragniesz spróbować czegoś innego, jak świderki, rurki, muszelki.
+            </p>
+            <div class="skills">
+                <button><a href="podstrony/O_nas.html">Czytaj więcej</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        </section>
+        
+        
+      
+          <!--Footer dolna stopka -->
+    
+    
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Kontakt</h1>
+                <a href="#" class="center">Bratkowice 166</a>
+                <a href="#" class="center">+48 533 690 652</a>
+                <a href="#" class="center">mateusz_salach@o2.pl</a>
+            </div>
+
+            <div class="tag">
+                <h1>Pomoc</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="podstrony/kontakt.html" class="center">Formularz kontaktowy</a>
+                <a href="podstrony/kontakt.html" class="center">Tu nas znajdziesz</a>
+            </div>
+
+            <div class="tag">
+                <h1>Nawigacja</h1>
+                <a href="index.html" class="center">Strona głowna</a>
+                <a href="podstrony/O_nas.html" class="center">O nas</a>
+                <a href="podstrony/kontakt.html" class="center">Kontakt</a>
+                <a href="#Products" class="center">Produkty</a>
+                <a href="podstrony/galeria.html" class="center">Przepisy</a>
+            </div>
+
+            <div class="tag">
+                <h1>Zaobserwój nas</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+         
+
+        </div>
+    </footer>
+        <footer class="footer">
+  
+    <p class="footer-text">© 2023 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+    <p class="footer-contact">Kontakt: Telefon: +48 123 456 789</p>
+  
+</footer>
+        
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+      
+      <script src="logowanie-rejestracja/connect-firebase.js"></script>
+      <script src="logowanie-rejestracja/wyswietl-nazwe-uzytkownika.js"></script>
+      
+      <script defer src="script/mapa.js"></script>
+      
+       <script defer src="script/script2.js"></script>
+      
+
+      
+    </body>
+    
+    
+    
+</html>

@@ -1,0 +1,255 @@
+    <!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+          <link rel="stylesheet" type="text/css" href="../css/kontakt-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+      
+      
+<!-- Font Awesome Icons Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+<!-- Link To Goggle Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      
+      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaron</title>
+  </head>
+  <body> 
+
+
+      
+      
+      
+      
+      
+      
+       <section class="menu">
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="logo">
+          <h1><a href="../index.html">Makaron</a></h1>
+        </div>
+
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../index.html#Products">Oferta</a></li>
+          <li><a href="O_nas.html">O firmie</a></li>
+          <li><a href="galeria.html">Makaronowe Inspiracje</a></li>
+          <li><a href="../podstrony/kontakt.html">Kontakt</a></li>
+        </ul>
+          
+                  <!-- ikona user-->
+<div class="icons">
+  <a href="../logowanie-rejestracja/logowanie.html">
+   <i id="userIcon" class="fa-solid fa-user hidden-icon"></i>
+  </a>
+<div id="dropdownContainer" class="dropdown">
+    <span id="userName" class="dropdown-btn" onclick="toggleDropdown()"></span>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="../podstrony/profil.html">Profil</a>
+        <a href="formularz-zamowienia.html">Zamów produkt</a>
+        <a href="../index.html" onclick="logout()">Wyloguj się</a>
+    </div>
+</div>
+</div>
+          
+
+      </nav>
+    </section>
+       
+      
+      <section class="podmenu">
+      
+       <div class="zdjpodmenu">
+        <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/kontakt.png?alt=media&token=36e98186-dfb4-4323-9e28-24b4775f896b" alt="zdj 1">
+      </div>
+      
+      
+      </section>
+      
+      
+      
+      
+      <div class="kontener">
+		<main class="row">
+			
+		
+
+			<section class="kol lewa">
+				
+			
+
+				<div class="kontakt">
+					<h2>Kontakt</h2>
+					<p>firma taka producent różnego rodzaju makaronu. Napisz do nas z pytaniem lub innym tematem</p>
+				</div>
+
+			
+				<div class="kontaktInfo">
+					
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="info">
+							<span>Telefon</span>
+							<span>+00 110 111 00</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="info">
+							<span>Email</span>
+							<span>firma@o2.pl</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="info">
+							<span>Lokalizacja</span>
+							<span>Bratkowice 166</span>
+						</div>
+					</div>
+
+				</div>
+
+				
+
+
+
+			</section>
+
+
+			<section class="kol prawa">
+
+		      <div class="komunikat" id="success-message" style="display: none; color: green;">
+  Formularz został pomyślnie wysłany!
+</div>
+				<form class="formularz">
+					
+					<div class="inputGroup halfWidth">
+						<input type="text" name="imie" required="required">
+						<label>Imię</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" name="email" required="required">
+						<label>Email</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<input type="text" name="temat" required="required">
+						<label>Temat</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea name="wiadomosc" required="required"></textarea>
+						<label>Wiadomość</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button>Wyślij</button>
+					</div>
+
+				</form>
+
+			</section>
+
+
+		</main>
+	</div>
+      
+      
+      
+      
+      
+        
+            <div class="mapa-container">
+                <div class="mapa">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115829.52736296166!2d21.916885251657668!3d50.095738665638876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ce2be61c41ebd%3A0xd0b112809ecf12cb!2sBratkowice%20166%2C%2036-055%20Bratkowice!5e0!3m2!1spl!2spl!4v1701856798846!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+      
+      
+      
+      
+      
+         <!--Footer dolna stopka -->
+    
+    
+    <footer>
+        <div class="footer_main">
+            <div class="tag">
+                <h1>Kontakt</h1>
+                <a href="#" class="center">Rzeszów Sucharskiego</a>
+                <a href="#" class="center">+94 12 345 6789</a>
+                <a href="#" class="center">contact@gmail.com</a>
+            </div>
+
+            <div class="tag">
+                <h1>Pomoc</h1>
+                <a href="#" class="center">FAQ</a>
+                <a href="#" class="center">Formularz kontaktowy</a>
+                <a href="#" class="center">Tu nas znajdziesz</a>
+            </div>
+
+            <div class="tag">
+                <h1>Nawigacja</h1>
+                <a href="#" class="center">O nas</a>
+                <a href="#" class="center">Kontakt</a>
+                <a href="#" class="center">Produkty</a>
+                <a href="#" class="center">Jaaa</a>
+            </div>
+
+            <div class="tag">
+                <h1>Zaobserwój nas</h1>
+                <div class="social_link">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+         
+
+        </div>
+    </footer>
+        <footer class="footer">
+  
+    <p class="footer-text">© 2023 Moja Strona. Wszelkie prawa zastrzeżone.</p>
+    <p class="footer-contact">Kontakt: Telefon: +48 123 456 789</p>
+  
+</footer>
+      
+      
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+      
+<script src="../logowanie-rejestracja/connect-firebase.js"></script>
+<script src="../logowanie-rejestracja/wyswietl-nazwe-uzytkownika.js"></script>
+<script type="module" src="../script/formularz.js"></script>
+      <script src="../script/script2.js"></script>
+     
+
+
+      
+
+    </body>
+    
+    
+    
+</html>

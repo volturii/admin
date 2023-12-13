@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    
+    
+    <h1>Admin Panel</h1>
+<br><br><br><br>
+    <h2><a href="mapa.html">Edytuj punkty na mapie</a></h2>
+    <h2><a href="Produkty.html">Edytuj produkty</a></h2>
+    <br><br><br>
+    
+    
+    <h2>Raport z ostatnich 30 dni</h2>
+   <div id="productReport"></div>
+    
+    <br><br><br><br>
+    
+        <h3>Wyszukaj zamówienia po dacie</h3>
+
+    <label for="searchDate">Wyświetl wszystkie zamówienia z danego dnia:</label>
+    <input type="date" id="searchDate">
+
+    <button onclick="searchForms()">Wyszukaj</button>
+    <button onclick="clearResults()">Wyczyść wyniki</button> <!-- Dodany przycisk Wyczyść -->
+    <!-- Kontener na wyświetlanie formularzy -->
+    <div id="searchResults"></div>
+<br> <br> <br> <br> <br>
+ 
+    <h3>Wyszukaj zamówienia po nazwie uzytkownika (formularz)</h3>
+    <!-- Dodaj element input do wprowadzania tekstu do filtrowania -->
+    <input type="text" id="userFilter" placeholder="Filter users">
+
+    <!-- Dodaj element select do wyboru użytkownika -->
+    <select id="userSelect">
+        <!-- Options zostaną dodane dynamicznie w kodzie JavaScript -->
+    </select>
+
+    <!-- Kontener na wyświetlanie listy użytkowników -->
+    <div id="userListDiv"></div>
+
+    <!-- Kontener na wyświetlanie formularzy -->
+    <div id="formData"></div>
+    
+    <!-- Kontener na wyświetlanie szczegółów formularza -->
+    <div id="formDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="formDetails"></div>
+        </div>
+    </div>
+
+    <!-- Dodaj pole textarea do wprowadzania opisu -->
+    <div id="opisInputContainer" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOpisInput()">&times;</span>
+            <textarea id="newOpisInput"></textarea>
+            <button onclick="saveOpis()">Zapisz Opis</button>
+        </div>
+    </div>
+
+</body>
+    
+    
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyD67hcKrDTHGeW30e5KwsxIfw3cFc82Wnw",
+  authDomain: "localhost",
+  databaseURL: "https://stronamakaron-default-rtdb.firebaseio.com",
+  projectId: "stronamakaron",
+  storageBucket: "stronamakaron.appspot.com",
+  messagingSenderId: "481194687354",
+  appId: "1:481194687354:web:69e692a5508f15d21e34c3",
+  measurementId: "G-9K2461DJGY"
+};
+  // Zainicjuj Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+    <script src="admin_panel.js"></script>
+    <script src="data.js"></script>
+</html>

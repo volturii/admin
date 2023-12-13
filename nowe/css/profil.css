@@ -1,0 +1,116 @@
+.hidden {
+    display: none;
+}
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.user-info,
+.change-password {
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-details {
+  width: 100%;
+}
+
+.change-password {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+p {
+  margin: 10px 0;
+}
+
+span {
+  color: #007bff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  color: #555;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsywność */
+@media screen and (max-width: 600px) {
+  .user-info,
+  .change-password {
+    margin: 100px auto 20px;
+  }
+}
+
+
+
+/* Nowe style dla historii zamówień */
+#userDataList {
+  list-style: none;
+  padding: 0;
+}
+
+.h2{
+    margin-top: 70px;
+}
+
+#userDataList li {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#userDataList li strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#userDataList hr {
+  border: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+/* Responsywność */
+@media screen and (max-width: 600px) {
+  #userDataList li {
+    padding: 10px;
+  }
+}
+

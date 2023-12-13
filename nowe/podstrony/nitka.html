@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="../script/skrypt.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Makaron</title>
+    <link rel="stylesheet" href="../css/produkt.css">
+    <link rel="stylesheet" href="../css/menu.css">
+   
+</head>
+    <body>
+        
+        
+        
+         <section class="menu">
+      <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="logo">
+          <h1><a href="../index.html">Makaron</a></h1>
+        </div>
+
+        <ul>
+          <li><a href="../index.html">Strona główna</a></li>
+          <li><a href="../index.html#Products">Oferta</a></li>
+          <li><a href="O_nas.html">O firmie</a></li>
+          <li><a href="galeria.html">Makaronowe Inspiracje</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+          
+<div class="icons">
+  <a href="../logowanie-rejestracja/logowanie.html">
+    <i id="userIcon" class="fa-solid fa-user hidden-icon"></i>
+  </a>
+<div id="dropdownContainer" class="dropdown">
+    <span id="userName" class="dropdown-btn" onclick="toggleDropdown()"></span>
+    <div class="dropdown-content" id="myDropdown">
+        <a href="../podstrony/profil.html">Profil</a>
+        <a href="../podstrony/formularz-zamowienia.html">Zamów produkt</a>
+        <a href="../index.html" onclick="logout()">Wyloguj się</a>
+    </div>
+</div>
+</div>
+          
+          
+          
+          
+          
+      </nav>
+    </section>
+        
+        
+        
+        
+        
+       <section class="produkt">
+
+        
+<div class="main1" id="Home">
+    
+    
+            <div class="main_content1">
+                
+                    <div class="informacje">
+                        <div class="container">
+                        <img class="image" src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/notes.png?alt=media&token=1fe5aa2c-964b-4a88-a926-2cf5c41627c8" alt="Zdjęcie">
+                            <div class="text">
+                    <h1>Nitka<br></h1>
+                    <h4>Sposób przygotowania</h4>
+                    <p>
+                        Zagotuj wodę, 1 l na 100 g makaronu. Posól według uznania. Do gotującej się wody wrzuć porcję Makaronu Lubella. Gotuj 5-6 minut. Od czasu do czasu zamieszaj. Ugotowany makaron odcedź.
+                    </p>
+                        
+                    <h4>O produkcie</h4>
+                    <p>
+                        Makaron w formie nitki to jedna z najpopularniejszych odmian tego włoskiego przysmaku. Nitki makaronu są cienkie, długie i cylindryczne, przypominające nici lub wstążki. Makaron nitka znajduje zastosowanie w przygotowywaniu zup i rosołów, gdzie jego cienkie nitki są doskonałym dodatkiem.
+                        
+                    </p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+
+            </div>
+    
+    
+    
+    
+    
+    
+    
+     <div class="containerr">
+                        
+                            <div class="textt">
+                    <h1>Nitka<br></h1>
+                    <h4>Sposób przygotowania</h4>
+                    <p>
+                        Zagotuj wodę, 1 l na 100 g makaronu. Posól według uznania. Do gotującej się wody wrzuć porcję Makaronu Lubella. Gotuj 5-6 minut. Od czasu do czasu zamieszaj. Ugotowany makaron odcedź.
+                    </p>
+                        
+                    <h4>O produkcie</h4>
+                    <p>
+                         Makaron w formie nitki to jedna z najpopularniejszych odmian tego włoskiego przysmaku. Nitki makaronu są cienkie, długie i cylindryczne, przypominające nici lub wstążki. Makaron nitka znajduje zastosowanie w przygotowywaniu zup i rosołów, gdzie jego cienkie nitki są doskonałym dodatkiem.
+                    </p>
+                        </div>
+                    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+  <div class="main_image1">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/stronamakaron.appspot.com/o/produktt.png?alt=media&token=1057991e-feb5-44b0-8ca2-a10aacbe7249" class="responsive-image">
+                </div>
+         
+
+  <!-- Przycisk otwierający okienko modalne -->
+  <button class="modal-button1" onclick="openModal()"><a>Wartości odżywcze</a></button>
+  
+  <!-- Okienko modalne -->
+  <div id="myModal" class="modal">
+    <!-- Zawartość okienka modalnego -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+            <table>
+                <caption>Wartości odżywcze</caption>
+  <tr>
+    <th>Wartość odżywcza</th>
+    <th>W 100g suchego produktu</th>
+  </tr>
+  <tr>
+    <td>Energia</td>
+    <td>1487 kJ / 351 kcal</td>
+  </tr>
+  <tr>
+    <td>Tłuszcz</td>
+    <td>1,4 g</td>
+  </tr>
+  <tr>
+    <td>- w tym kwasy nasycone</td>
+    <td>0,4 g</td>
+  </tr>
+  <tr>
+    <td>Węglowodany</td>
+    <td>70 g</td>
+  </tr>
+  <tr>
+    <td>- w tym cukry</td>
+    <td>4,2 g</td>
+  </tr>
+  <tr>
+    <td>Błonnik</td>
+    <td>3,0 g</td>
+  </tr>
+  <tr>
+    <td>Białko</td>
+    <td>13 g</td>
+  </tr>
+  <tr>
+    <td>Sól</td>
+    <td>0,03 g</td>
+  </tr>
+</table>
+    </div>
+  </div>
+    
+    
+
+  
+         
+</div>
+
+ 
+
+    </section>
+        
+        
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+      
+<script src="../logowanie-rejestracja/connect-firebase.js"></script>
+<script src="../logowanie-rejestracja/wyswietl-nazwe-uzytkownika.js"></script>
+
+      <script src="../script/script2.js"></script>
+        
+</body>
+</html>

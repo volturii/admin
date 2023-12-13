@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication with Firebase - Rejestracja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1></h1>
+
+    <!-- Rejestracja -->
+    <h2>Rejestracja</h2>
+    <form id="registerForm">
+        <label for="registerEmail">Email:</label>
+        <input type="email" id="registerEmail" required>
+
+        <label for="registerPassword">Hasło:</label>
+        <input type="password" id="registerPassword" required>
+
+        <label for="displayName">Nazwa użytkownika:</label>
+        <input type="text" id="displayName" required>
+
+        <button type="submit">Zarejestruj się</button>
+        <p>Masz już konto? <a href="logowanie.html">Zaloguj się</a></p>
+    </form>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="connect-firebase.js"></script>
+    <script src="rejestracja.js"></script>
+    <script src="wyswietl-nazwe-uzytkownika.js"></script>
+</body>
+</html>

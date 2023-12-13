@@ -1,0 +1,30 @@
+#lista-zamowien {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 80vh;
+    display: flex;
+    flex-wrap: wrap; /* Dodane elastyczne owijanie (wrap) */
+    justify-content: center;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(30% - 20px); /* Maksymalnie 3 na szerokość z marginesem */
+    box-sizing: border-box; /* Ustawienie modelu pudełkowego na border-box */
+}
+
+li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add responsive styles for smaller screens */
+@media only screen and (max-width: 600px) {
+    li {
+        flex: 0 0 calc(100% - 20px); /* Na mniejszych ekranach, jeden na szerokość */
+   
