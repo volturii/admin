@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+    
+    
+    
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin: 0;
+        }
+
+        #dataEntryForm {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    
+    
+    
+    <h1><a href="admin_panel.html">Admin Panel</a></h1>
+<br><br><br><br>
+ 
+    
+
+
+<form id="dataEntryForm">
+    <label for="name">Imię:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Nr Telefonu:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+
+    <div id="produktyContainer">
+        <!-- Pusta przestrzeń dla dynamicznie dodawanych pól produktów -->
+    </div>
+
+     <label for="product">Produkt:</label>
+    <select id="product" name="product" required></select>
+    
+    <button type="button" onclick="addProductRow()">Dodaj produkt</button>
+    <button type="button" onclick="removeProductRow()">Usuń ostatni produkt</button>
+
+    <br><br><br>
+    <button type="button" onclick="addData()">Dodaj zamówienie</button>
+</form>
+    
+
+
+</body>
+    
+    
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyD67hcKrDTHGeW30e5KwsxIfw3cFc82Wnw",
+  authDomain: "localhost",
+  databaseURL: "https://stronamakaron-default-rtdb.firebaseio.com",
+  projectId: "stronamakaron",
+  storageBucket: "stronamakaron.appspot.com",
+  messagingSenderId: "481194687354",
+  appId: "1:481194687354:web:69e692a5508f15d21e34c3",
+  measurementId: "G-9K2461DJGY"
+};
+  // Zainicjuj Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+    <script src="zamowienia.js"></script>
+</html>
